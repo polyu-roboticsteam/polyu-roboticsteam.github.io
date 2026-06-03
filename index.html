@@ -4,345 +4,218 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PolyU AI &amp; Robotics Club</title>
-  <meta name="description" content="PolyU AI and Robotics Club is a hands-on student community for FENG students interested in AI, robotics, autonomous systems, and real-world innovation.">
+  <meta name="description" content="PolyU AI and Robotics Club is a hands-on student community for AI, robotics, autonomous systems, competitions, and real-world engineering projects.">
   <meta property="og:title" content="PolyU AI &amp; Robotics Club">
-  <meta property="og:description" content="Build Intelligence. Create Impact.">
-  <meta property="og:image" content="images/polyu-ai-robotics-club-poster.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:image" content="images/polyu-ai-robotics-club-poster.png">
-  <style>
-    :root {
-      --primary: #0b84d8;
-      --ink: #111827;
-      --muted: #4b5563;
-      --line: #d8dee9;
-      --soft: #f4f8fb;
-      --panel: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: #ffffff;
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      line-height: 1.55;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 16px max(22px, calc((100vw - 1120px) / 2));
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0;
-    }
-
-    .nav {
-      display: flex;
-      gap: 16px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav a {
-      text-decoration: none;
-    }
-
-    main {
-      overflow: hidden;
-    }
-
-    section {
-      padding: 56px max(22px, calc((100vw - 1120px) / 2));
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
-      align-items: center;
-      gap: 40px;
-      min-height: calc(100vh - 72px);
-      background: linear-gradient(135deg, #f8fbff 0%, #ffffff 52%, #eef7ff 100%);
-    }
-
-    .kicker {
-      margin: 0 0 10px;
-      color: var(--primary);
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      max-width: 760px;
-      font-size: clamp(2.4rem, 6vw, 5.2rem);
-      line-height: 0.95;
-      letter-spacing: 0;
-    }
-
-    .lead {
-      max-width: 660px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 1.12rem;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 10px 16px;
-      border: 1px solid var(--primary);
-      border-radius: 6px;
-      background: var(--primary);
-      color: #ffffff;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--primary);
-    }
-
-    .poster {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.2);
-    }
-
-    .band {
-      background: var(--soft);
-    }
-
-    h2 {
-      margin: 0 0 18px;
-      font-size: clamp(1.55rem, 3vw, 2.2rem);
-      letter-spacing: 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 22px;
-    }
-
-    .card {
-      min-height: 148px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      color: var(--primary);
-      font-size: 1rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .path {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .path-item {
-      padding: 16px;
-      border-left: 3px solid var(--primary);
-      background: #ffffff;
-    }
-
-    .path-item strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .path-item span {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .join {
-      display: grid;
-      grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
-      align-items: center;
-      gap: 34px;
-    }
-
-    .join img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 20px 56px rgba(15, 23, 42, 0.16);
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 22px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .contact a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    footer {
-      padding: 22px max(22px, calc((100vw - 1120px) / 2));
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 840px) {
-      .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav {
-        flex-wrap: wrap;
-      }
-
-      .hero,
-      .join {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .cards,
-      .path {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta property="og:description" content="Build intelligence. Create impact.">
+  <meta property="og:image" content="images/robotic_logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="images/robotic_logo.jpg">
+  <link rel="icon" href="images/robotic_logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="brand">PolyU AI &amp; Robotics Club</div>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#what-we-do">What We Do</a>
-      <a href="#growth">Growth Path</a>
-      <a href="#join">Join</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="PolyU AI and Robotics Club home">
+        <img class="brand-logo" src="images/robotic_logo.svg" width="1600" height="1131" alt="PolyU AI and Robotics Club logo">
+        <span class="brand-text">
+          <span class="brand-title">PolyU AI &amp; Robotics Club</span>
+          <span class="brand-subtitle">FENG Student Community</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span aria-hidden="true"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="team.html">Team</a>
+        <a class="nav-cta" href="join.html">Join</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <p class="kicker">PolyU FENG Student Community</p>
-        <h1>PolyU AI &amp; Robotics Club</h1>
-        <p class="lead">
-          A hands-on community for students who want to build intelligent robots, learn practical AI and robotics skills, and turn ideas into real-world autonomous systems.
-        </p>
-        <div class="actions">
-          <a class="button" href="https://linktr.ee/polyuairoboticsclub">Join the Club</a>
-          <a class="button secondary" href="mailto:robosig@connect.polyu.hk">Contact Us</a>
+  <main id="main">
+    <section class="page-hero home-hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">The Hong Kong Polytechnic University</p>
+          <h1>PolyU AI &amp; Robotics Club</h1>
+          <p class="lead">
+            A hands-on community where students build intelligent robots, learn practical AI and engineering skills, and turn ambitious ideas into working autonomous systems.
+          </p>
+          <div class="actions">
+            <a class="button" href="join.html">Join the Club</a>
+            <a class="button secondary" href="projects.html">Explore Projects</a>
+          </div>
         </div>
       </div>
-      <img class="poster" src="images/polyu-ai-robotics-club-poster.png" alt="PolyU AI and Robotics Club recruitment poster">
-    </section>
-
-    <section id="what-we-do" class="band">
-      <h2>What We Do</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Real Robotics Projects</h3>
-          <p>Work with drones, autonomous vehicles, humanoid robots, robot dogs, sensors, actuators, and embedded systems.</p>
-        </article>
-        <article class="card">
-          <h3>AI and Software</h3>
-          <p>Explore perception, computer vision, SLAM, robot simulation, AI algorithms, and practical programming workflows.</p>
-        </article>
-        <article class="card">
-          <h3>Training and Mentorship</h3>
-          <p>Join workshops, tutorials, internal projects, and peer learning paths designed for beginners and advanced builders.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="growth">
-      <h2>Growth Path</h2>
-      <div class="path">
-        <div class="path-item">
-          <strong>Tier 3</strong>
-          <span>Build foundations, learn tools, and join workshops.</span>
+      <div class="stat-strip" aria-label="Club focus areas">
+        <div class="stat">
+          <strong>4</strong>
+          <span>Core technical areas</span>
         </div>
-        <div class="path-item">
-          <strong>Tier 2</strong>
-          <span>Take on club projects and grow across multiple technical areas.</span>
+        <div class="stat">
+          <strong>3</strong>
+          <span>Growth tiers for members</span>
         </div>
-        <div class="path-item">
-          <strong>Tier 1</strong>
-          <span>Lead internal projects, compete, mentor teammates, and earn recognition.</span>
+        <div class="stat">
+          <strong>5+</strong>
+          <span>Competition pathways</span>
         </div>
-        <div class="path-item">
-          <strong>Competitions</strong>
-          <span>Prepare for RoboMaster, RAiCON, RoboCup Singapore Open, and more.</span>
+        <div class="stat">
+          <strong>1</strong>
+          <span>Shared builder community</span>
         </div>
       </div>
     </section>
 
-    <section id="join" class="join band">
-      <img src="images/polyu-ai-robotics-club-poster.png" alt="PolyU AI and Robotics Club recruitment poster">
-      <div>
-        <h2>Build Intelligence. Create Impact.</h2>
-        <p>
-          The club welcomes FENG students interested in mechanical design, electronics and control, perception and AI vision, software, and robotics competitions. Beginners can start with guided training, while experienced members can join core teams and lead hands-on projects.
-        </p>
-        <div class="contact">
-          <span>Join: <a href="https://linktr.ee/polyuairoboticsclub">linktr.ee/polyuairoboticsclub</a></span>
-          <span>Email: <a href="mailto:robosig@connect.polyu.hk">robosig@connect.polyu.hk</a></span>
-          <span>Email: <a href="mailto:robotics.polyu@gmail.com">robotics.polyu@gmail.com</a></span>
+    <section class="section home-section home-section-build">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">What We Build</p>
+            <h2>From first prototype to competition-ready systems.</h2>
+          </div>
+          <p>Members work across hardware, software, AI, control, and system integration while learning how real robotics teams operate.</p>
         </div>
+        <div class="grid grid-3">
+          <article class="card accent">
+            <span class="eyebrow">Robotics</span>
+            <h3>Real Robots &amp; Platforms</h3>
+            <p>Explore drones, autonomous vehicles, humanoid robots, robot dogs, sensors, actuators, and embedded systems.</p>
+          </article>
+          <article class="card accent">
+            <span class="eyebrow">AI Systems</span>
+            <h3>Perception &amp; Intelligence</h3>
+            <p>Practice computer vision, SLAM, simulation, planning, and AI algorithms that help robots understand the world.</p>
+          </article>
+          <article class="card accent">
+            <span class="eyebrow">Training</span>
+            <h3>Workshops &amp; Mentorship</h3>
+            <p>Start with guided training, join project groups, learn from peers, and grow toward technical leadership.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section home-section-projects">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Featured Projects</p>
+            <h2>Project tracks ready for members to join.</h2>
+          </div>
+          <a class="button ghost" href="projects.html">View All Projects</a>
+        </div>
+        <div class="grid grid-3">
+          <article class="project-card">
+            <div class="card-media photo">
+              <img src="images/club/robot-platform.jpg" width="1500" height="844" alt="Robotics platform hardware on a workbench">
+              <strong>Autonomous Mobility</strong>
+            </div>
+            <div class="card-body">
+              <h3>Autonomous Vehicle Platform</h3>
+              <p>Navigation, sensing, embedded control, and AI decision logic for small autonomous systems.</p>
+              <ul class="tag-list">
+                <li>Perception</li>
+                <li>Control</li>
+                <li>Software</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-media photo">
+              <img src="images/club/hands-on-training.jpg" width="1500" height="1000" alt="Students working hands-on with robotics equipment">
+              <strong>Robot Perception</strong>
+            </div>
+            <div class="card-body">
+              <h3>Vision &amp; SLAM Lab</h3>
+              <p>Computer vision, mapping, localization, and simulation workflows for robotics applications.</p>
+              <ul class="tag-list">
+                <li>AI</li>
+                <li>SLAM</li>
+                <li>Simulation</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-media photo">
+              <img src="images/club/competition-achievement.jpg" width="1500" height="1125" alt="Competition certificates and trophy displayed on a table">
+              <strong>Competition Engineering</strong>
+            </div>
+            <div class="card-body">
+              <h3>RoboMaster Preparation</h3>
+              <p>Mechanical, electrical, software, and strategy development for robotics competition readiness.</p>
+              <ul class="tag-list">
+                <li>Mechanical</li>
+                <li>Electronics</li>
+                <li>Teamwork</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section home-section-activities">
+      <div class="section-inner split">
+        <figure class="photo-panel wide">
+          <img src="images/club/training-room.jpg" width="1500" height="1000" alt="Club training session in a computer classroom">
+          <figcaption>Training sessions help members move from theory into practical robotics workflows.</figcaption>
+        </figure>
+        <div>
+          <p class="kicker">Upcoming Activities</p>
+          <h2>Learn, build, test, and share progress together.</h2>
+          <p class="lead">
+            The club supports both beginners and experienced builders through training sessions, technical groups, internal projects, and competition preparation.
+          </p>
+          <div class="actions">
+            <a class="button" href="events.html">See Events</a>
+            <a class="button secondary" href="about.html">How Growth Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-section home-section-recruitment">
+      <div class="section-inner split">
+        <div>
+          <p class="kicker">Recruitment</p>
+          <h2>Build intelligence. Create impact.</h2>
+          <p class="lead">
+            Join the community if you are interested in mechanical design, electronics and control, perception and AI vision, software, robotics competitions, or learning how multidisciplinary engineering teams work.
+          </p>
+          <div class="actions">
+            <a class="button" href="join.html">Start Joining</a>
+            <a class="button secondary" href="mailto:robosig@connect.polyu.hk">Contact Us</a>
+          </div>
+        </div>
+        <figure class="photo-panel">
+          <img src="images/club/promotion-table.jpg" width="1500" height="1125" alt="Club promotion table with robotics displays and students speaking with visitors">
+          <figcaption>Meet the club through recruitment activities, workshops, and project sessions.</figcaption>
+        </figure>
       </div>
     </section>
   </main>
 
-  <footer>
-    &copy; 2026 PolyU AI &amp; Robotics Club
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <img src="images/robotic_logo.svg" width="1600" height="1131" alt="">
+        <span>PolyU AI &amp; Robotics Club</span>
+      </a>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://linktr.ee/polyuairoboticsclub">Linktree</a>
+        <a href="mailto:robosig@connect.polyu.hk">robosig@connect.polyu.hk</a>
+        <a href="mailto:robotics.polyu@gmail.com">robotics.polyu@gmail.com</a>
+      </div>
+      <p class="footer-note">&copy; 2026 PolyU AI &amp; Robotics Club. Student community website hosted on GitHub Pages.</p>
+    </div>
   </footer>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
