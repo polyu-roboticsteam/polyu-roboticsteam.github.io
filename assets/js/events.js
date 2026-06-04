@@ -33,7 +33,7 @@ const parseFrontMatterValue = (value = "") => {
   return trimmed.replace(/^['"]|['"]$/g, "");
 };
 
-const parseMarkdownFile = (source, path) => {
+const parseEventFile = (source, path) => {
   const match = source.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
   if (!match) {
     return { meta: { title: path }, body: source.trim(), path };
@@ -53,14 +53,14 @@ const parseMarkdownFile = (source, path) => {
   return { meta, body: match[2].trim(), path };
 };
 
-const inlineMarkdown = (text) =>
+const inlineEventText = (text) =>
   escapeHtml(text)
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/\*([^*]+)\*/g, "<em>$1</em>");
 
-const markdownToHtml = (markdown) => {
-  const lines = markdown.split(/\r?\n/);
+const eventContentToHtml = (content) => {
+  const lines = content.split(/\r?\n/);
   const html = [];
   let listOpen = false;
 
@@ -81,13 +81,13 @@ const markdownToHtml = (markdown) => {
 
     if (trimmed.startsWith("## ")) {
       closeList();
-      html.push(`<h3>${inlineMarkdown(trimmed.slice(3))}</h3>`);
+      html.push(`<h3>${inlineEventText(trimmed.slice(3))}</h3>`);
       return;
     }
 
     if (trimmed.startsWith("### ")) {
       closeList();
-      html.push(`<h4>${inlineMarkdown(trimmed.slice(4))}</h4>`);
+      html.push(`<h4>${inlineEventText(trimmed.slice(4))}</h4>`);
       return;
     }
 
@@ -96,12 +96,12 @@ const markdownToHtml = (markdown) => {
         html.push("<ul>");
         listOpen = true;
       }
-      html.push(`<li>${inlineMarkdown(trimmed.slice(2))}</li>`);
+      html.push(`<li>${inlineEventText(trimmed.slice(2))}</li>`);
       return;
     }
 
     closeList();
-    html.push(`<p>${inlineMarkdown(trimmed)}</p>`);
+    html.push(`<p>${inlineEventText(trimmed)}</p>`);
   });
 
   closeList();
@@ -128,9 +128,10 @@ const renderEventCard = (event, index) => {
       <button class="event-card-button" type="button" data-event-index="${index}" aria-label="Open details for ${escapeHtml(meta.title)}">
         <span class="event-card-cover" style="background-image: url('${escapeHtml(image)}')"></span>
         <span class="event-card-content">
+          <span class="event-icon" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#icon-calendar"></use></svg></span>
           <span class="eyebrow">${escapeHtml(tagText[0] || "Event")}</span>
           <h3>${escapeHtml(meta.title || "Untitled Event")}</h3>
-          <p>${inlineMarkdown(summary)}</p>
+          <p>${inlineEventText(summary)}</p>
           <span class="event-meta">
             <span>Date: ${escapeHtml(meta.date || "TBC")}</span>
             <span>Location: ${escapeHtml(meta.location || "TBC")}</span>
@@ -154,7 +155,7 @@ const openEventDialog = (event) => {
         <span>Date: ${escapeHtml(meta.date || "TBC")}</span>
         <span>Location: ${escapeHtml(meta.location || "TBC")}</span>
       </div>
-      <div class="event-markdown">${markdownToHtml(body)}</div>
+      <div class="event-rich-text">${eventContentToHtml(body)}</div>
     </div>
   `;
 
@@ -181,7 +182,7 @@ const loadEvents = async () => {
       EVENT_FILES.map(async (path) => {
         const response = await fetch(path);
         if (!response.ok) throw new Error(`Unable to load ${path}`);
-        return parseMarkdownFile(await response.text(), path);
+        return parseEventFile(await response.text(), path);
       })
     );
 
@@ -199,7 +200,7 @@ const loadEvents = async () => {
   } catch (error) {
     if (eventStatus) {
       eventStatus.hidden = false;
-      eventStatus.textContent = "Events could not be loaded. Please view this page through a local or GitHub Pages server.";
+      eventStatus.textContent = "Event details could not be loaded right now. Please contact the club for the latest event information.";
     }
   }
 };

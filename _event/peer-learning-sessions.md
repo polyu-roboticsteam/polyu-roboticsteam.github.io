@@ -8,7 +8,7 @@ category: past training
 order: 120
 ---
 
-Internal sharing and project preparation sessions for technical growth across member tiers.
+Peer sharing and project preparation sessions for technical growth across member tiers.
 
 ## Highlights
 
