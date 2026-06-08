@@ -255,16 +255,40 @@ main {
   padding-top: 86px;
   padding-bottom: 48px;
   background:
-    linear-gradient(135deg, rgba(17, 18, 23, 0.94), rgba(36, 51, 68, 0.9)),
-    linear-gradient(90deg, rgba(160, 35, 55, 0.5), rgba(0, 119, 167, 0.42));
+    linear-gradient(180deg, rgba(17, 18, 23, 0.46), rgba(17, 18, 23, 0.72)),
+    url("../../images/club/member-group.jpg") center 42% / cover;
   color: #ffffff;
 }
 
 .join-hero {
   background:
-    linear-gradient(135deg, rgba(17, 18, 23, 0.94), rgba(160, 35, 55, 0.82)),
-    linear-gradient(90deg, rgba(0, 119, 167, 0.42), rgba(255, 255, 255, 0));
+    linear-gradient(90deg, rgba(17, 18, 23, 0.82), rgba(160, 35, 55, 0.66)),
+    url("../../images/club/promotion-table.jpg") center 44% / cover;
   color: #ffffff;
+}
+
+.image-hero {
+  border-bottom: 0;
+  background:
+    linear-gradient(90deg, rgba(17, 18, 23, 0.82), rgba(17, 18, 23, 0.48)),
+    var(--hero-image) center / cover;
+  color: #ffffff;
+}
+
+.about-hero {
+  --hero-image: url("../../images/club/hands-on-training.jpg");
+}
+
+.team-hero {
+  --hero-image: url("../../images/club/team-exchange.jpg");
+}
+
+.projects-hero {
+  --hero-image: url("../../images/club/robot-platform.jpg");
+}
+
+.events-hero {
+  --hero-image: url("../../images/club/promotion-booth.jpg");
 }
 
 .hero-inner {
@@ -291,7 +315,9 @@ main {
 .home-hero .kicker,
 .home-hero .lead,
 .join-hero .kicker,
-.join-hero .lead {
+.join-hero .lead,
+.image-hero .kicker,
+.image-hero .lead {
   color: rgba(255, 255, 255, 0.88);
 }
 
@@ -393,7 +419,8 @@ h3 {
 }
 
 .home-hero .visual-tag,
-.join-hero .visual-tag {
+.join-hero .visual-tag,
+.image-hero .visual-tag {
   border-color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
