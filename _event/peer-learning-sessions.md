@@ -2,7 +2,7 @@
 title: Peer Learning Sessions
 date: 2025
 location: PolyU campus
-image: images/club/team-working.jpg
+image: images/robotic_logo.jpg
 tags: Events, Training, Past
 category: past training
 order: 120

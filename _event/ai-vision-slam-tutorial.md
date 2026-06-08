@@ -2,7 +2,7 @@
 title: AI Vision & SLAM Tutorial
 date: TBC
 location: PolyU campus
-image: images/club/training-room.jpg
+image: images/robotic_logo.jpg
 tags: Events, Training, AI
 category: upcoming training
 order: 30

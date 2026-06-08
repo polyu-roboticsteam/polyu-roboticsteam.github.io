@@ -2,7 +2,7 @@
 title: Club Recruitment Campaign
 date: 2025
 location: PolyU campus
-image: images/club/promotion-booth.jpg
+image: images/robotic_logo.jpg
 tags: Events, Recruitment, Past
 category: past recruitment
 order: 110

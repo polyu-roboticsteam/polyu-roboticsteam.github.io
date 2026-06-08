@@ -1,5 +1,6 @@
 const EVENT_FILES = [
   "_event/recruitment-orientation.md",
+  "_event/robot-platform-demo.md",
   "_event/robotics-starter-workshop.md",
   "_event/ai-vision-slam-tutorial.md",
   "_event/competition-team-planning.md",

@@ -2,7 +2,7 @@
 title: Event Title
 date: TBC
 location: PolyU campus
-image: images/club/promotion-table.jpg
+image: images/robotic_logo.jpg
 tags: Events, Training
 category: upcoming training
 order: 10
