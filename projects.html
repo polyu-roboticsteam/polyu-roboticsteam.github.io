@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | PolyU AI &amp; Robotics Club</title>
-  <meta name="description" content="Explore PolyU AI and Robotics Club project tracks for rescue robotics, robot dogs, self-driving logistics vehicles, UAVs, AI perception, embedded systems, and competition engineering.">
+  <meta name="description" content="Explore PolyU AI and Robotics Club project tracks for robot dogs, self-driving logistics vehicles, AI perception, embedded systems, and integrated robotics engineering.">
   <meta property="og:title" content="Projects | PolyU AI &amp; Robotics Club">
   <meta property="og:description" content="Robotics and AI project tracks for student builders.">
   <meta property="og:image" content="images/robotic_logo.jpg">
@@ -12,7 +12,7 @@
   <link rel="icon" href="images/robotic_logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Oxanium:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -33,9 +33,18 @@
         <a href="index.html">Home</a>
         <a href="about.html">Vision</a>
         <a href="projects.html">Projects</a>
+        <a href="competition.html">Competition</a>
         <a href="events.html">Events</a>
+        <details class="nav-dropdown">
+          <summary>Past Season</summary>
+          <div class="nav-dropdown-menu">
+            <a href="past-seasons.html#season-2026">2025-2026</a>
+            <a href="past-seasons.html#season-2025">2024-2025</a>
+            <a href="past-seasons.html#older-seasons">Before 2024</a>
+          </div>
+        </details>
         <a href="team.html">Team</a>
-        <a class="nav-cta" href="join.html">Join</a>
+        <a class="nav-cta" href="join.html">Join Us</a>
       </nav>
     </div>
   </header>
@@ -65,27 +74,10 @@
           <button class="filter-button" type="button" data-filter="perception">Perception &amp; AI</button>
           <button class="filter-button" type="button" data-filter="software">Software</button>
           <button class="filter-button" type="button" data-filter="logistics">Logistics</button>
-          <button class="filter-button" type="button" data-filter="competition">Competition</button>
         </div>
 
         <div class="grid grid-3">
-          <article class="project-card" data-filter-item data-category="mechanical electronics software perception competition">
-            <div class="card-media red">
-              <strong>RoboCup Rescue Platform</strong>
-            </div>
-            <div class="card-body">
-              <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#icon-trophy"></use></svg></span>
-              <h3>Rescue Robotics Platform</h3>
-              <p>Develop ground robot capabilities for disaster response, rubble traversal, victim detection, mapping, and GPS-denied operation.</p>
-              <ul class="tag-list">
-                <li>Competition</li>
-                <li>Navigation</li>
-                <li>Integration</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project-card" data-filter-item data-category="mechanical electronics software perception competition">
+          <article class="project-card" data-filter-item data-category="mechanical electronics software perception">
             <div class="card-media">
               <strong>Robot Dog Module Study</strong>
             </div>
@@ -113,22 +105,6 @@
                 <li>Logistics</li>
                 <li>Autonomy</li>
                 <li>Safety</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project-card" data-filter-item data-category="perception software competition">
-            <div class="card-media red">
-              <strong>UAV Reconnaissance &amp; Mapping</strong>
-            </div>
-            <div class="card-body">
-              <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#icon-rocket"></use></svg></span>
-              <h3>UAV Reconnaissance &amp; Mapping</h3>
-              <p>Explore indoor flight, 3D mapping, aerial inspection, and coordination with ground robots in GPS-denied spaces.</p>
-              <ul class="tag-list">
-                <li>UAV</li>
-                <li>Mapping</li>
-                <li>Perception</li>
               </ul>
             </div>
           </article>
@@ -170,16 +146,27 @@
 
     <section class="section band">
       <div class="section-inner">
-        <div>
-          <p class="kicker">Project Culture</p>
-          <h2>Small tasks, visible progress, real systems.</h2>
-          <p class="lead">
-            Each project should make it easy for new members to start with a practical task while giving experienced members room to own modules, testing, and integration.
-          </p>
-          <div class="actions">
-            <a class="button" href="join.html">Join a Project</a>
-            <a class="button secondary" href="events.html">Attend Training</a>
+        <div class="split">
+          <div>
+            <p class="kicker">Project Culture</p>
+            <h2>Small tasks, visible progress, real systems.</h2>
+            <p class="lead">
+              Each project should make it easy for new members to start with a practical task while giving experienced members room to own modules, testing, and integration.
+            </p>
+            <div class="actions">
+              <a class="button" href="join.html">Join a Project</a>
+              <a class="button secondary" href="events.html">Attend Training</a>
+            </div>
           </div>
+          <article class="card accent reveal-card">
+            <span class="card-icon" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#icon-trophy"></use></svg></span>
+            <span class="eyebrow">Separate Track</span>
+            <h3>Looking for competition work?</h3>
+            <p>Competition preparation now has its own page with rescue robotics, UAV mapping, AI challenge, integration, and member-role pathways.</p>
+            <div class="actions compact-actions">
+              <a class="button secondary" href="competition.html">Open Competition Page</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>

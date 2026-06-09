@@ -12,7 +12,7 @@
   <link rel="icon" href="images/robotic_logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Oxanium:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -33,9 +33,18 @@
         <a href="index.html">Home</a>
         <a href="about.html">Vision</a>
         <a href="projects.html">Projects</a>
+        <a href="competition.html">Competition</a>
         <a href="events.html">Events</a>
+        <details class="nav-dropdown">
+          <summary>Past Season</summary>
+          <div class="nav-dropdown-menu">
+            <a href="past-seasons.html#season-2026">2025-2026</a>
+            <a href="past-seasons.html#season-2025">2024-2025</a>
+            <a href="past-seasons.html#older-seasons">Before 2024</a>
+          </div>
+        </details>
         <a href="team.html">Team</a>
-        <a class="nav-cta" href="join.html">Join</a>
+        <a class="nav-cta" href="join.html">Join Us</a>
       </nav>
     </div>
   </header>
@@ -112,7 +121,7 @@
       </div>
     </section>
 
-    <section class="section band">
+    <section class="section band recruitment-guidelines-section">
       <div class="section-inner">
         <div class="section-heading">
           <div>
@@ -121,53 +130,124 @@
           </div>
           <p>Levels are based on contribution, skill growth, commitment, documentation, and leadership. Results are confidential, but the criteria are public.</p>
         </div>
-        <div class="grid grid-3">
-          <article class="tier-card">
-            <span class="eyebrow">Level 3</span>
-            <h3>Registered Participant</h3>
-            <p>Join talks, workshops, demonstrations, and introductory activities while exploring which technical area fits you.</p>
+        <div class="level-pathway" data-level-pathway aria-label="Three recruitment levels">
+          <article class="tier-card pathway-tier is-active" data-level-card data-motion-card tabindex="0">
+            <span class="level-badge">03</span>
+            <div class="tier-copy">
+              <span class="eyebrow">Level 3</span>
+              <h3>Registered Participant</h3>
+              <p>Join talks, workshops, demonstrations, and introductory activities while exploring which technical area fits you.</p>
+            </div>
           </article>
-          <article class="tier-card">
-            <span class="eyebrow">Level 2</span>
-            <h3>Developing Member</h3>
-            <p>Receive training, join internal projects, complete practical tasks, and build foundational competence in at least one domain.</p>
+          <article class="tier-card pathway-tier" data-level-card data-motion-card tabindex="0">
+            <span class="level-badge">02</span>
+            <div class="tier-copy">
+              <span class="eyebrow">Level 2</span>
+              <h3>Developing Member</h3>
+              <p>Receive training, join internal projects, complete practical tasks, and build foundational competence in at least one domain.</p>
+            </div>
           </article>
-          <article class="tier-card featured">
-            <span class="eyebrow">Level 1</span>
-            <h3>Advanced Core Member</h3>
-            <p>Lead modules, mentor teammates, prepare competitions, represent the club, and deliver substantial project outcomes.</p>
+          <article class="tier-card pathway-tier featured" data-level-card data-motion-card tabindex="0">
+            <span class="level-badge">01</span>
+            <div class="tier-copy">
+              <span class="eyebrow">Level 1</span>
+              <h3>Advanced Core Member</h3>
+              <p>Lead modules, mentor teammates, prepare competitions, represent the club, and deliver substantial project outcomes.</p>
+            </div>
           </article>
         </div>
-        <div class="rule-grid">
-          <article class="rule-panel">
-            <h3>Level 3 to Level 2</h3>
-            <ul class="check-list">
-              <li>Attend at least 70% of workshops and training over one semester.</li>
-              <li>Pass one foundational skills evaluation.</li>
-              <li>Contribute to at least one project.</li>
-              <li>Receive endorsement from one Level 1 member or PhD supervisor.</li>
-            </ul>
+
+        <div class="promotion-artifact-board">
+          <article class="rule-panel artifact-panel">
+            <div class="artifact-panel-head">
+              <span class="path-badge">3 -> 2</span>
+              <div>
+                <h3>Level 3 to Level 2</h3>
+                <p>Four visible artifacts show foundation and contribution.</p>
+              </div>
+            </div>
+            <div class="artifact-grid">
+              <div class="guideline-artifact">
+                <strong>70%</strong>
+                <span>Workshop and training attendance over one semester.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>1</strong>
+                <span>Foundational skills evaluation passed.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>Project</strong>
+                <span>Contribution to at least one project.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>Endorsement</strong>
+                <span>Support from one Level 1 member or PhD supervisor.</span>
+              </div>
+            </div>
           </article>
-          <article class="rule-panel">
-            <h3>Level 2 to Level 1</h3>
-            <p>Meet at least four requirements.</p>
-            <ul class="check-list">
-              <li>Complete a significant technical project or research contribution.</li>
-              <li>Contribute substantially to a major competition.</li>
-              <li>Lead a sub-team or mentor at least two members.</li>
-              <li>Dedicate at least 10 hours per week for one semester.</li>
-              <li>Produce high-quality documentation or presentations.</li>
-              <li>Receive two Level 1 nominations with faculty approval.</li>
-            </ul>
+
+          <article class="rule-panel artifact-panel featured-artifact-panel">
+            <div class="artifact-panel-head">
+              <span class="path-badge">2 -> 1</span>
+              <div>
+                <h3>Level 2 to Level 1</h3>
+                <p>Meet at least four requirements.</p>
+              </div>
+            </div>
+            <div class="artifact-grid six-artifacts">
+              <div class="guideline-artifact">
+                <strong>Technical</strong>
+                <span>Complete a significant technical project or research contribution.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>Competition</strong>
+                <span>Contribute substantially to a major competition.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>Lead</strong>
+                <span>Lead a sub-team or mentor at least two members.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>10h/week</strong>
+                <span>Dedicate at least 10 hours per week for one semester.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>Docs</strong>
+                <span>Produce high-quality documentation or presentations.</span>
+              </div>
+              <div class="guideline-artifact">
+                <strong>2 + Faculty</strong>
+                <span>Receive two Level 1 nominations with faculty approval.</span>
+              </div>
+            </div>
           </article>
-          <article class="rule-panel">
-            <h3>Probation and Appeals</h3>
-            <ul class="check-list">
-              <li>Members receive a mid-semester check-in and end-of-semester evaluation.</li>
-              <li>Before demotion, members receive written notice, a mentor, an improvement plan, and 4 weeks of probation.</li>
-              <li>Appeals can be submitted within one week with supporting evidence.</li>
-              <li>Re-promotion is possible after one full semester of demonstrated improvement.</li>
-            </ul>
+        </div>
+
+        <div class="review-timeline" aria-label="Probation and appeals timeline">
+          <article class="review-step">
+            <span>01</span>
+            <h3>Mid-Semester Check-In</h3>
+            <p>Members receive a mid-semester check-in and end-of-semester evaluation.</p>
+          </article>
+          <article class="review-step">
+            <span>02</span>
+            <h3>Written Notice</h3>
+            <p>Before demotion, members receive written notice, a mentor, and an improvement plan.</p>
+          </article>
+          <article class="review-step">
+            <span>03</span>
+            <h3>4 Weeks</h3>
+            <p>Members complete a probation period with mentor support.</p>
+          </article>
+          <article class="review-step">
+            <span>04</span>
+            <h3>1 Week Appeal</h3>
+            <p>Appeals can be submitted within one week with supporting evidence.</p>
+          </article>
+          <article class="review-step">
+            <span>05</span>
+            <h3>Re-Promotion</h3>
+            <p>Re-promotion is possible after one full semester of demonstrated improvement.</p>
           </article>
         </div>
       </div>

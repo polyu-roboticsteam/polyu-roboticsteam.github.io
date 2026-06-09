@@ -11,7 +11,9 @@ Main pages:
 - `index.html` - homepage with hero, club focus areas, featured projects, activities, and recruitment call-to-action.
 - `about.html` - mission, technical areas, growth system, and member pathway.
 - `projects.html` - project cards with category filtering.
+- `competition.html` - competition tracks, preparation workflow, roles, and joining call-to-action.
 - `events.html` - event archive and upcoming events generated from Markdown files in `_event/`.
+- `past-seasons.html` - season archive with a dropdown for past club seasons and memories.
 - `team.html` - team structure, technical groups, and advisor/partner section.
 - `join.html` - joining path, FAQ, and contact information.
 
@@ -22,7 +24,9 @@ Main pages:
 ├── index.html
 ├── about.html
 ├── projects.html
+├── competition.html
 ├── events.html
+├── past-seasons.html
 ├── team.html
 ├── join.html
 ├── _event/
@@ -145,4 +149,3 @@ Before publishing:
 - Confirm contact emails are current.
 - Confirm event Markdown files are listed in `assets/js/events.js`.
 - Search for unused or old image references before deleting assets.
-
