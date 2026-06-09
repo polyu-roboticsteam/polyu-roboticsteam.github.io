@@ -363,7 +363,9 @@ h1,
 .page-title {
   margin: 0;
   max-width: 820px;
+  font-family: Orbitron, Inter, "Segoe UI", Arial, sans-serif;
   font-size: 4.6rem;
+  font-weight: 800;
   line-height: 0.98;
   letter-spacing: 0;
 }
